@@ -1,0 +1,108 @@
+.main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0px 10px 10px;
+    background-color: lightgrey;
+
+    .sideBar {
+        width: 20%;
+        height: calc(100% - 20px);
+        padding: 15px;
+        border-radius: 15px 0px 0px 15px;
+        background-color: currentcolor;
+        position: relative;
+        left: 2.5px;
+        font-family: btitr;
+
+        .col {
+            width: 100%;
+
+            .side {
+                display: flex;
+                flex-direction: column;
+                width: 77%;
+
+                .bi {
+                    color: white;
+                    width: 20px;
+                    height: 20px;
+                    position: relative;
+                    right: 10%;
+                }
+            }
+        }
+
+        .li {
+            width: 125%;
+            border-radius: 10px;
+            margin-top: 7px;
+            position: relative;
+            left: 10%;
+        }
+
+        .liborder {
+            outline-style: solid;
+            outline-width: 1px;
+        }
+
+        .amargin {
+            margin-top: 15px;
+        }
+
+        .a {
+            border-radius: 10px;
+        }
+
+
+        // .side {
+        //     .item {
+        //         font-size: 23px;
+        //         padding-top: 10px;
+
+        //         .itemUl {
+        //             list-style-type: none;
+        //             display: flex;
+        //             flex-direction: column;
+
+        //             .itemLi {
+        //                 width: 70%;
+        //                 background-color: darkslategrey;
+        //                 color: white;
+        //                 height: 25px;
+        //             }
+        //         }
+
+        //         .hr {
+        //             color: white;
+        //             width: 80%;
+        //             display: flex;
+        //             align-items: center;
+
+
+        //         }
+        //     }
+        // }
+    }
+
+
+
+
+    .compo {
+        // background-color: rgb(118, 76, 214);
+        width: calc(77% - 5px);
+        height: calc(100% - 20px);
+        margin-right: 3%;
+        // border: double;
+        border-radius: 15px;
+        padding: 30px;
+    }
+}
+
+@font-face {
+    font-family: btitr;
+    src: url(../assets/fonts/BTITRBD.TTF);
+}

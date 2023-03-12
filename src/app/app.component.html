@@ -1,0 +1,184 @@
+<div class="main">
+  <div class="sideBar">
+
+    <!-- side bar menu ***********-->
+    <div class="row">
+      <div class="col col-4">
+        <div class="side btn-group btn-group-toggle" id="list-tab" role="tablist">
+          <a class="a btn btn-secondary" [ngClass]="{'active':home}" [routerLink]="['/home']" (click)="homeClick()"
+            role="tab" aria-controls="home">خانه</a>
+
+
+          <a class="a amargin btn btn-secondary" [ngClass]="{'active':info}" [routerLink]="['/info']"
+            (click)="infoClick()" id="list-messages-list" data-toggle="list" role="tab"
+            aria-controls="messages">مشخصات</a>
+
+          <a class="liborder a amargin btn btn-secondary" (click)="messageClick()" id="list-messages-list"
+            data-toggle="list" role="tab" aria-controls="messages">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+              class="bi bi-arrow-bar-down" viewBox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M1 3.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5zM8 6a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 .708-.708L7.5 12.293V6.5A.5.5 0 0 1 8 6z" />
+            </svg>
+            پیام ها</a>
+
+          <ul>
+            <li class="li btn btn-secondary" [routerLink]="['/messages']" (click)="messagenClick()" *ngIf="message"
+              [ngClass]="{'active':messagen} ">
+              مشاهده پیام ها
+            </li>
+          </ul>
+
+          <a class="liborder a btn btn-secondary" (click)="profileClick()" id="list-profile-list" data-toggle="list"
+            role="tab" aria-controls="profile">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+              class="bi bi-arrow-bar-down" viewBox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M1 3.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5zM8 6a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 .708-.708L7.5 12.293V6.5A.5.5 0 0 1 8 6z" />
+            </svg>
+            پروفایل</a>
+
+          <ul>
+            <li class="li btn btn-secondary" *ngIf="profile" [routerLink]="['/changepic']"
+              [ngClass]="{'active':profilen1}" (click)="profilen1Click()">
+              تغییر نمایه
+            </li>
+            <li class="li btn btn-secondary" *ngIf="profile" [routerLink]="['/changeinfo']"
+              [ngClass]="{'active':profilen2}" (click)="profilen2Click()">
+              ویرایش اطلاعات
+            </li>
+            <li class="li btn btn-secondary" *ngIf="profile" [routerLink]="['/add']" [ngClass]="{'active':profilen3}"
+              (click)="profilen3Click()">
+              اضافه کردن حساب
+            </li>
+            <li class="li btn btn-secondary" *ngIf="profile" [routerLink]="['/delete']" [ngClass]="{'active':profilen4}"
+              (click)="profilen4Click()">
+              حذف حساب
+            </li>
+          </ul>
+
+          <a class="liborder a btn btn-secondary" (click)="settingClick()" id="list-settings-list" data-toggle="list"
+            role="tab" aria-controls="settings">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+              class="bi bi-arrow-bar-down" viewBox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M1 3.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5zM8 6a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 .708-.708L7.5 12.293V6.5A.5.5 0 0 1 8 6z" />
+            </svg>
+            تنظیمات</a>
+          <ul>
+
+            <li class="btn btn-secondary li" *ngIf="setting" [routerLink]="['/prof']" [ngClass]="{'active':settingn1}"
+              (click)="settingN1Click()">
+              شخصی سازی
+            </li>
+            <li class="btn btn-secondary li" *ngIf="setting" [routerLink]="['/password']"
+              [ngClass]="{'active':settingn2}" (click)="settingN2Click()">
+              تنظیم گذرواژه
+            </li>
+            <li class="btn btn-secondary li" *ngIf="setting" [routerLink]="['/cash']" [ngClass]="{'active':settingn3}"
+              (click)="settingN3Click()">
+              امور مالی
+            </li>
+            <li class="btn btn-secondary li" *ngIf="setting" [routerLink]="['/logout']" [ngClass]="{'active':settingn4}"
+              (click)="settingN4Click()">
+              خروج از حساب
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- <div class="col col-8">
+    <div class="tab-content" id="nav-tabContent">
+      <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">...
+      </div>
+      <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">...</div>
+      <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">...</div>
+      <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">...</div>
+    </div>
+  </div> -->
+    </div>
+    <!-- ********************** -->
+
+
+    <!-- under code -->
+
+  </div>
+  <div class="compo">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<!-- side bar menu ***********-->
+<!-- <div class="row">
+      <div class="col col-4">
+        <div class="list-group" id="list-tab" role="tablist">
+          <a class="list-group-item list-group-item-action" [ngClass]="{'active':home}" (click)="homeClick()" role="tab"
+            aria-controls="home">Home</a>
+          <a class="list-group-item list-group-item-action" [ngClass]="{'active':profile}" (click)="profileClick()"
+            id="list-profile-list" data-toggle="list" role="tab" aria-controls="profile">Profile</a>
+
+          <ul>
+            <li class="li list-group-item list-group-item-action active" *ngIf="profile"
+              [ngClass]="{'active':profilen1}" (click)="profilen1Click()">
+              number 1
+            </li>
+            <li class="list-group-item list-group-item-action active" *ngIf="profile" [ngClass]="{'active':profilen2}"
+              (click)="profilen2Click()">
+              number 2
+            </li>
+            <li class="list-group-item list-group-item-action active" *ngIf="profile" [ngClass]="{'active':profilen3}"
+              (click)="profilen3Click()">
+              number 3
+            </li>
+            <li class="list-group-item list-group-item-action active" *ngIf="profile" [ngClass]="{'active':profilen4}"
+              (click)="profilen4Click()">
+              number 4
+            </li>
+          </ul>
+          
+          <a class="list-group-item list-group-item-action" [ngClass]="{'active':message}" (click)="messageClick()"
+            id="list-messages-list" data-toggle="list" role="tab" aria-controls="messages">Messages</a>
+          
+            <a class="a list-group-item list-group-item-action" (click)="settingClick()"
+            id="list-settings-list" data-toggle="list" role="tab" aria-controls="settings">Settings</a>
+          <ul>
+
+            <li class="list-group-item list-group-item-action active li" *ngIf="setting"
+              [ngClass]="{'active':settingn1}" (click)="settingN1Click()">
+              number 1
+            </li>
+            <li class="list-group-item list-group-item-action active" *ngIf="setting" [ngClass]="{'active':settingn2}"
+              (click)="settingN2Click()">
+              number 2
+            </li>
+            <li class="list-group-item list-group-item-action active" *ngIf="setting" [ngClass]="{'active':settingn3}"
+              (click)="settingN3Click()">
+              number 3
+            </li>
+            <li class="list-group-item list-group-item-action active" *ngIf="setting" [ngClass]="{'active':settingn4}"
+              (click)="settingN4Click()">
+              number 4
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col col-8">
+        <div class="tab-content" id="nav-tabContent">
+          <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">...
+          </div>
+          <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">...</div>
+          <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">...</div>
+          <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">...</div>
+        </div>
+      </div>
+    </div> -->
+<!-- ********************** -->

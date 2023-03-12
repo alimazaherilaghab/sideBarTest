@@ -1,0 +1,132 @@
+.main {
+    width: 100%;
+    height: 100%;
+    direction: rtl;
+
+    .form {
+        width: 100%;
+
+        .login {
+            width: 100%;
+            font-family: Btitr;
+
+
+            .Subject {
+                font-size: 30px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-bottom: -10px;
+                position: relative;
+                top: -20px;
+
+                .line {
+                    width: 30%;
+                    display: flex;
+                }
+            }
+
+
+            .centerEmail {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .email {
+                    width: 50%;
+
+                    .buttonForm {
+                        display: flex;
+                        justify-content: flex-end;
+                        width: 100%;
+
+                        .btn {
+                            width: 200px;
+                            margin-top: 5px;
+                            font-size: 18px;
+                        }
+                    }
+
+                    // .lbl {
+                    //     margin-top: 5px;
+                    // }
+
+                    .input {
+                        margin: 5px 5px 15px 0px;
+                        font-family: Georgia, 'Times New Roman', Times, serif;
+                        direction: ltr;
+                    }
+                }
+            }
+        }
+
+
+        .singup {
+            font-family: Btitr;
+
+            .form2 {
+                width: 100%;
+
+                .Subject {
+                    font-size: 30px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    position: relative;
+                    top: -5px;
+                    margin-bottom: 10px;
+
+                    .line {
+                        width: 30%;
+                        display: flex;
+                    }
+                }
+
+                .centerbox {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    .box {
+
+                        .smallbox {
+                            margin-right: 20px;
+                        }
+
+                        .lbl {
+                            margin-top: 15px;
+                        }
+
+                        .english {
+                            direction: ltr;
+                        }
+
+                        .large {
+                            width: 250px;
+                        }
+
+                        .input {
+                            margin: 5px 5px 15px 0px;
+                        }
+                    }
+                }
+
+                .buttonForm {
+                    width: 84%;
+                    display: flex;
+                    justify-content: flex-end;
+
+                    .btn{
+                        width: 200px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@font-face {
+    font-family: Btitr;
+    src: url(/src/assets/Fonts/ITITRBD.TTF);
+}
